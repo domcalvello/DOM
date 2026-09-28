@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#131921" />
+    <meta
+      name="description"
+      content="DOM makes websites, digital artwork, ecommerce assets, branding, and product visualizations with clear packages and visible pricing."
+    />
+    <title>DOM — Digital Object Maker</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23131921'/%3E%3Cpath d='M13 14h18c12 0 20 7 20 18S43 50 31 50H13V14Zm12 10v16h6c5 0 8-3 8-8s-3-8-8-8h-6Z' fill='%23ffb703'/%3E%3C/svg%3E"
+    />
+    <link rel="preload" href="assets/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/byte-vermin-online.jpg" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <div class="shell nav-row">
+        <a class="brand" href="#top" aria-label="DOM, Digital Object Maker, home">
+          <span class="brand-mark">DOM</span>
+          <span class="brand-expansion">Digital Object Maker</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="menu-toggle-line"></span>
+          <span class="menu-toggle-line"></span>
+          <span class="visually-hidden">Open navigation</span>
+        </button>
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#process">How It Works</a>
+          <a href="#about">About</a>
+        </nav>
+        <a class="button button-purchase nav-cta" href="#start">Start a Project</a>
+      </div>
+      <div class="service-search-wrap">
+        <form class="shell service-search" role="search" data-service-search>
+          <label for="service-search-input">What do you need made?</label>
+          <div class="search-control">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="m21 21-4.35-4.35m2.35-5.15A7.5 7.5 0 1 1 4 11.5a7.5 7.5 0 0 1 15 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input id="service-search-input" type="search" placeholder="Search websites, listing images, logos, product concepts…" autocomplete="off" />
+            <button type="submit">Find</button>
+          </div>
+          <p class="search-status" aria-live="polite" data-search-status></p>
+        </form>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <h1 id="hero-title"><span>Need something digital?</span>DOM makes it.</h1>
+            <p>
+              Professional digital design services without the complexity of a traditional agency process. Websites, digital artwork, ecommerce assets, branding, and product visualizations—made by one experienced multidisciplinary designer.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-purchase" href="#services">Shop Services</a>
+              <a class="button button-outline" href="#work">View Work</a>
+            </div>
+            <ul class="hero-assurances" aria-label="Service assurances">
+              <li>Clear package pricing</li>
+              <li>Defined deliverables</li>
+              <li>Production-ready results</li>
+            </ul>
+          </div>
+
+          <div class="hero-media" aria-label="Selected DOM project work">
+            <figure class="media-main">
+              <img src="assets/byte-vermin-online.jpg" alt="BYTE VERMIN product visualization showing a digital collectible beside its online collector portal" width="1432" height="875" />
+              <figcaption><span>BYTE VERMIN</span><span>Concept · Product · Web</span></figcaption>
+            </figure>
+            <figure class="media-small media-output-one">
+              <img src="assets/docklight.jpg" alt="Docklight Lobster House website design" width="1800" height="1027" />
+              <figcaption><span>Website</span><span>Web design</span></figcaption>
+            </figure>
+            <figure class="media-small media-output-two">
+              <img src="assets/red-white-bruised.webp" alt="Red White and Bruised logo and web asset design" width="1254" height="1254" />
+              <figcaption><span>Brand mark</span><span>Web assets</span></figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="shell hero-trust" aria-label="DOM credentials">
+          <span>Digital Media Degree</span>
+          <span>IT Certified</span>
+          <span>Hundreds of Finished Projects</span>
+          <span>Web + Design + Multimedia</span>
+        </div>
+      </section>
+
+      <section class="section service-store" id="services" aria-labelledby="services-title">
+        <div class="shell section-heading service-store-heading">
+          <div>
+            <h2 id="services-title">Shop digital services</h2>
+            <p>Choose the deliverable and scope that fit the job. Every package shows the price before you start.</p>
+          </div>
+          <a class="text-link" href="#start">Not sure what fits? Send the idea.</a>
+        </div>
+
+        <div class="shell service-list" data-service-list>
+          <article class="service-product" data-service="Website Visual Upgrade" data-keywords="website web page visual upgrade redesign responsive hero typography spacing buttons cards animation">
+            <div class="product-media">
+              <img src="assets/docklight.jpg" alt="Docklight Lobster House responsive website concept with bold restaurant hero design" width="1800" height="1027" loading="lazy" decoding="async" />
+              <div class="product-media-meta"><span>Website design</span><strong>Starts at $49</strong></div>
+            </div>
+            <div class="product-body">
+              <header>
+                <h3>Website Visual Upgrade</h3>
+                <p>Improve and modernize an existing website without paying for a complete rebuild.</p>
+              </header>
+              <fieldset class="package-picker" data-package-picker>
+                <legend>Choose a package</legend>
+                <label class="package-option">
+                  <input type="radio" name="website-package" value="Level 1 — Quick Fix|49" data-panel="website-quick" />
+                  <span><b>Level 1</b><small>Quick Fix</small></span><strong>$49</strong>
+                </label>
+                <label class="package-option is-featured">
+                  <input type="radio" name="website-package" value="Level 2 — Visual Upgrade|99" data-panel="website-upgrade" checked />
+                  <span><b>Level 2</b><small>Visual Upgrade · Most Popular</small></span><strong>$99</strong>
+                </label>
+                <label class="package-option">
+                  <input type="radio" name="website-package" value="Level 3 — Page Polish|179" data-panel="website-polish" />
+                  <span><b>Level 3</b><small>Page Polish</small></span><strong>$179</strong>
+                </label>
+              </fieldset>
+              <div class="package-panels">
+                <div class="package-panel" id="website-quick" hidden>
+                  <h4>Level 1 — Quick Fix</h4>
+                  <ul><li>One existing page</li><li>1–2 focused visual improvements</li><li>Desktop + mobile check</li><li>No structural rebuild</li></ul>
+                </div>
+                <div class="package-panel" id="website-upgrade">
+                  <h4>Level 2 — Visual Upgrade <span>Most Popular</span></h4>
+                  <ul><li>One existing page</li><li>Up to 3 substantial visual improvements</li><li>Responsive implementation</li><li>Interaction or animation where appropriate</li><li>Desktop + mobile polish</li></ul>
+                </div>
+                <div class="package-panel" id="website-polish" hidden>
+                  <h4>Level 3 — Page Polish</h4>
+                  <ul><li>One complete page</li><li>Up to approximately 6 visual improvements</li><li>Hero, typography, spacing, layout, buttons, and cards</li><li>Background treatment + responsive cleanup</li><li>Performance sanity check</li></ul>
+                </div>
+              </div>
+              <button class="button button-blue choose-package" type="button" data-service-choice>Choose Package</button>
+            </div>
+          </article>
+
+          <article class="service-product service-product-reverse" data-service="Website Hero / Digital Artwork" data-keywords="custom website hero digital artwork image banner web imagery concepts mobile crop supporting assets">
+            <div class="product-media">
+              <img src="assets/magnus-oculus.jpg" alt="Magnus Oculus website hero featuring a cinematic optical instrument and immersive interface" width="1800" height="1229" loading="lazy" decoding="async" />
+              <div class="product-media-meta"><span>Custom website imagery</span><strong>Starts at $39</strong></div>
+            </div>
+            <div class="product-body">
+              <header>
+                <h3>Custom Website Hero</h3>
+                <p>Professional custom website imagery designed around your brand, copy, and layout.</p>
+              </header>
+              <fieldset class="package-picker" data-package-picker>
+                <legend>Choose a package</legend>
+                <label class="package-option">
+                  <input type="radio" name="hero-package" value="Basic|39" data-panel="hero-basic" checked />
+                  <span><b>Basic</b><small>One concept</small></span><strong>$39</strong>
+                </label>
+                <label class="package-option">
+                  <input type="radio" name="hero-package" value="Standard|69" data-panel="hero-standard" />
+                  <span><b>Standard</b><small>Desktop + mobile</small></span><strong>$69</strong>
+                </label>
+                <label class="package-option">
+                  <input type="radio" name="hero-package" value="Premium|119" data-panel="hero-premium" />
+                  <span><b>Premium</b><small>Complete visual set</small></span><strong>$119</strong>
+                </label>
+              </fieldset>
+              <div class="package-panels">
+                <div class="package-panel" id="hero-basic"><h4>Basic</h4><ul><li>1 concept</li><li>Desktop hero</li><li>PNG + web-optimized version</li></ul></div>
+                <div class="package-panel" id="hero-standard" hidden><h4>Standard</h4><ul><li>3 concepts</li><li>Selected desktop hero + mobile crop</li><li>PNG + web-optimized version</li><li>Text-safe composition</li></ul></div>
+                <div class="package-panel" id="hero-premium" hidden><h4>Premium</h4><ul><li>3 concepts</li><li>Desktop + mobile hero</li><li>3 supporting visual assets</li><li>Web optimization</li></ul></div>
+              </div>
+              <button class="button button-blue choose-package" type="button" data-service-choice>Choose Package</button>
+            </div>
+          </article>
+
+          <article class="service-product" data-service="eBay & Collectibles Listing Images" data-keywords="ebay ecommerce listing images collectibles tcg graded cards lego figures product photo cleanup template">
+            <div class="product-media product-media-portrait">
+              <img src="assets/gag-slab.webp" alt="G.A.G. graded AOL trial CD product concept presented in a clear collectibles slab" width="1086" height="1448" loading="lazy" decoding="async" />
+              <div class="product-media-meta"><span>Collectibles + ecommerce</span><strong>Starts at $25</strong></div>
+            </div>
+            <div class="product-body">
+              <header>
+                <h3>eBay &amp; Collectibles Listing Images</h3>
+                <p>Turn raw item photography into clean, consistent, ecommerce-ready listing visuals.</p>
+              </header>
+              <p class="focus-line">TCG · graded cards · LEGO · figures · collectibles · ecommerce products</p>
+              <fieldset class="package-picker" data-package-picker>
+                <legend>Choose a package</legend>
+                <label class="package-option"><input type="radio" name="listing-package" value="5 Images|25" data-panel="listing-5" checked /><span><b>5 Images</b><small>Focused batch</small></span><strong>$25</strong></label>
+                <label class="package-option"><input type="radio" name="listing-package" value="15 Images|49" data-panel="listing-15" /><span><b>15 Images</b><small>Standard batch</small></span><strong>$49</strong></label>
+                <label class="package-option"><input type="radio" name="listing-package" value="30 Images|79" data-panel="listing-30" /><span><b>30 Images</b><small>Large batch</small></span><strong>$79</strong></label>
+              </fieldset>
+              <div class="package-panels">
+                <div class="package-panel" id="listing-5"><h4>5 Images</h4><ul><li>Five ecommerce-ready listing images</li><li>Consistent presentation cleanup</li></ul></div>
+                <div class="package-panel" id="listing-15" hidden><h4>15 Images</h4><ul><li>Fifteen ecommerce-ready listing images</li><li>Consistent presentation cleanup</li></ul></div>
+                <div class="package-panel" id="listing-30" hidden><h4>30 Images</h4><ul><li>Thirty ecommerce-ready listing images</li><li>Consistent presentation cleanup</li></ul></div>
+              </div>
+              <div class="add-on"><span>Optional add-on</span><strong>Custom branded listing template — +$30</strong></div>
+              <p class="condition-note">Presentation cleanup only. Item condition and physical defects are never digitally concealed.</p>
+              <button class="button button-blue choose-package" type="button" data-service-choice>Choose Package</button>
+            </div>
+          </article>
+
+          <article class="service-product service-product-reverse" data-service="Logo & Web Asset Kit" data-keywords="logo web asset kit png webp favicon icon light dark social avatar header footer cleanup export ratios">
+            <div class="product-media product-media-square">
+              <img src="assets/red-white-bruised.webp" alt="Red White and Bruised dimensional logo asset in red white and blue" width="1254" height="1254" loading="lazy" decoding="async" />
+              <div class="product-media-meta"><span>Brand production assets</span><strong>Starts at $29</strong></div>
+            </div>
+            <div class="product-body">
+              <header>
+                <h3>Logo &amp; Web Asset Kit</h3>
+                <p>Turn an existing logo into a complete, organized, production-ready web asset package.</p>
+              </header>
+              <fieldset class="package-picker" data-package-picker>
+                <legend>Choose a package</legend>
+                <label class="package-option"><input type="radio" name="asset-package" value="Basic|29" data-panel="asset-basic" checked /><span><b>Basic</b><small>Core exports</small></span><strong>$29</strong></label>
+                <label class="package-option"><input type="radio" name="asset-package" value="Standard|49" data-panel="asset-standard" /><span><b>Standard</b><small>Expanded web set</small></span><strong>$49</strong></label>
+                <label class="package-option"><input type="radio" name="asset-package" value="Premium|79" data-panel="asset-premium" /><span><b>Premium</b><small>Cleanup + guidance</small></span><strong>$79</strong></label>
+              </fieldset>
+              <div class="package-panels">
+                <div class="package-panel" id="asset-basic"><h4>Basic</h4><ul><li>Transparent PNG + WebP</li><li>Light + dark variants</li><li>Favicon sizes + icon exports</li></ul></div>
+                <div class="package-panel" id="asset-standard" hidden><h4>Standard</h4><ul><li>Everything in Basic</li><li>Optimized header + footer versions</li><li>Social avatar</li><li>Additional web-ready variants</li></ul></div>
+                <div class="package-panel" id="asset-premium" hidden><h4>Premium</h4><ul><li>Everything in Standard</li><li>Basic cleanup + spacing correction</li><li>Multiple export ratios</li><li>Implementation guidance</li></ul></div>
+              </div>
+              <button class="button button-blue choose-package" type="button" data-service-choice>Choose Package</button>
+            </div>
+          </article>
+
+          <article class="service-product" data-service="Product Visualization" data-keywords="concept product visualization rough idea sketch drawing description render lifestyle detail inventor startup kickstarter etsy">
+            <div class="product-media">
+              <img src="assets/legacy-devices.webp" alt="Legacy Device Group Therapy product visualization featuring anthropomorphic vintage technology" width="1536" height="1024" loading="lazy" decoding="async" />
+              <div class="product-media-meta"><span>Concept → product</span><strong>Starts at $59</strong></div>
+            </div>
+            <div class="product-body">
+              <header>
+                <h3>Concept → Product Visualization</h3>
+                <p>Turn a rough idea, sketch, drawing, or description into polished visual concept artwork.</p>
+              </header>
+              <fieldset class="package-picker" data-package-picker>
+                <legend>Choose a package</legend>
+                <label class="package-option"><input type="radio" name="visual-package" value="Basic|59" data-panel="visual-basic" checked /><span><b>Basic</b><small>One concept</small></span><strong>$59</strong></label>
+                <label class="package-option"><input type="radio" name="visual-package" value="Standard|99" data-panel="visual-standard" /><span><b>Standard</b><small>Three views</small></span><strong>$99</strong></label>
+                <label class="package-option"><input type="radio" name="visual-package" value="Premium|149" data-panel="visual-premium" /><span><b>Premium</b><small>Full visual set</small></span><strong>$149</strong></label>
+              </fieldset>
+              <div class="package-panels">
+                <div class="package-panel" id="visual-basic"><h4>Basic</h4><ul><li>1 polished concept image</li></ul></div>
+                <div class="package-panel" id="visual-standard" hidden><h4>Standard</h4><ul><li>3 polished product views</li></ul></div>
+                <div class="package-panel" id="visual-premium" hidden><h4>Premium</h4><ul><li>Hero render</li><li>Product view</li><li>Lifestyle or context image</li><li>Detail image</li></ul></div>
+              </div>
+              <button class="button button-blue choose-package" type="button" data-service-choice>Choose Package</button>
+            </div>
+          </article>
+
+          <div class="no-results" data-no-results hidden>
+            <h3>No exact match yet.</h3>
+            <p>DOM handles broader digital work too. Send the idea and the right path can be scoped from there.</p>
+            <a class="button button-purchase" href="#start">Send Your Idea</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-service" aria-labelledby="featured-title">
+        <div class="shell featured-grid">
+          <div class="featured-intro">
+            <span class="badge badge-orange">Most Popular</span>
+            <h2 id="featured-title">The $99 website visual upgrade</h2>
+            <p>Three substantial improvements to one existing page, selected around the changes that will make the biggest visible difference.</p>
+            <div class="featured-price"><span>Level 2 — Visual Upgrade</span><strong>$99</strong></div>
+            <button class="button button-purchase" type="button" data-direct-service="Website Visual Upgrade" data-direct-package="Level 2 — Visual Upgrade">Start This Project</button>
+          </div>
+          <div class="featured-scope">
+            <h3>Choose up to three substantial improvements</h3>
+            <div class="scope-grid" aria-label="Potential improvement areas">
+              <span>Hero</span><span>Typography</span><span>Spacing</span><span>Buttons</span><span>Cards</span><span>Backgrounds</span><span>Animation</span><span>Responsive refinement</span>
+            </div>
+            <p>The package does not promise every item shown. You choose up to three that best fit the page.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process" id="process" aria-labelledby="process-title">
+        <div class="shell section-heading">
+          <div><h2 id="process-title">How DOM works</h2><p>Four clear steps. No software knowledge or agency vocabulary required.</p></div>
+        </div>
+        <ol class="shell process-list">
+          <li><span>01</span><div><h3>Choose what you need</h3><p>Pick a service and package.</p></div></li>
+          <li><span>02</span><div><h3>Send what you have</h3><p>Website, logo, photos, screenshot, description, reference, rough sketch—even a napkin sketch.</p></div></li>
+          <li><span>03</span><div><h3>DOM builds it</h3><p>Your material becomes a polished digital result.</p></div></li>
+          <li><span>04</span><div><h3>Receive / launch</h3><p>Get production-ready files or an implemented web result, depending on the service.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="transformation" aria-labelledby="transformation-title">
+        <div class="shell transformation-heading">
+          <h2 id="transformation-title">Input → DOM → Output</h2>
+          <p>This is what you give DOM. This is what DOM gives you back.</p>
+        </div>
+        <div class="shell transformation-stage reveal">
+          <figure class="transform-input">
+            <img src="assets/rough-sketch.jpg" alt="Rough hand-drawn input sketch" width="1600" height="1425" loading="lazy" decoding="async" />
+            <figcaption><span>Input</span><strong>Rough sketch</strong></figcaption>
+          </figure>
+          <div class="transform-engine" aria-label="DOM transforms the input">
+            <span>DOM</span>
+            <svg viewBox="0 0 74 28" width="74" height="28" aria-hidden="true"><path d="M2 14h64m-12-11 16 11-16 11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <figure class="transform-output">
+            <img src="assets/byte-vermin-online.jpg" alt="Finished BYTE VERMIN digital product visualization and web interface" width="1432" height="875" loading="lazy" decoding="async" />
+            <figcaption><span>Output</span><strong>Product visualization + web concept</strong></figcaption>
+          </figure>
+        </div>
+        <div class="shell transformation-lines" aria-label="More DOM transformations">
+          <div><span>Existing page</span><b>DOM</b><strong>Polished website</strong></div>
+          <div><span>Raw product photo</span><b>DOM</b><strong>Listing ready</strong></div>
+          <div><span>Logo file</span><b>DOM</b><strong>Complete web asset kit</strong></div>
+          <div><span>Creative brief</span><b>DOM</b><strong>Website hero</strong></div>
+        </div>
+      </section>
+
+      <section class="section selected-work" id="work" aria-labelledby="work-title">
+        <div class="shell section-heading work-heading">
+          <div><h2 id="work-title">Selected work</h2><p>A focused view of web, branding, product concepts, interface design, and digital artwork.</p></div>
+          <span>8 selected projects</span>
+        </div>
+        <div class="shell work-grid">
+          <figure class="work-item work-wide"><img src="assets/byte-vermin-online.jpg" alt="BYTE VERMIN digital collectible and web portal" width="1432" height="875" loading="lazy" decoding="async" /><figcaption><strong>BYTE VERMIN</strong><span>Product visualization · Web</span></figcaption></figure>
+          <figure class="work-item work-tall"><img src="assets/neighbors-packaging.webp" alt="The Neighbors retro toy package concept" width="1448" height="1086" loading="lazy" decoding="async" /><figcaption><strong>The Neighbors</strong><span>Packaging · Concept art</span></figcaption></figure>
+          <figure class="work-item"><img src="assets/docklight.jpg" alt="Docklight Lobster House website design" width="1800" height="1027" loading="lazy" decoding="async" /><figcaption><strong>Docklight Lobster House</strong><span>Website design</span></figcaption></figure>
+          <figure class="work-item"><img src="assets/mj-stereo.webp" alt="M and J Stereo Receiver interactive browser interface" width="1384" height="1058" loading="lazy" decoding="async" /><figcaption><strong>M&amp;J Stereo Receiver</strong><span>Interactive experience</span></figcaption></figure>
+          <figure class="work-item work-wide"><img src="assets/system-strike.webp" alt="System Strike cybersecurity game visual system" width="1938" height="812" loading="lazy" decoding="async" /><figcaption><strong>System Strike</strong><span>Game concept · Visual system</span></figcaption></figure>
+          <figure class="work-item"><img src="assets/legacy-devices.webp" alt="Legacy Device Group Therapy dimensional artwork" width="1536" height="1024" loading="lazy" decoding="async" /><figcaption><strong>Legacy Device Group Therapy</strong><span>Digital artwork · Concept</span></figcaption></figure>
+          <figure class="work-item"><img src="assets/magnus-oculus.jpg" alt="Magnus Oculus immersive website concept" width="1800" height="1229" loading="lazy" decoding="async" /><figcaption><strong>Magnus Oculus</strong><span>Website concept · Motion</span></figcaption></figure>
+          <figure class="work-item work-square"><img src="assets/red-white-bruised.webp" alt="Red White and Bruised logo design" width="1254" height="1254" loading="lazy" decoding="async" /><figcaption><strong>Red, White &amp; Bruised</strong><span>Logo · Web assets</span></figcaption></figure>
+        </div>
+      </section>
+
+      <section class="capabilities" aria-labelledby="capabilities-title">
+        <div class="shell capabilities-grid">
+          <h2 id="capabilities-title">More things DOM can make</h2>
+          <ul>
+            <li>Branding</li><li>Logos</li><li>Advertisements</li><li>Social media assets</li><li>Web design</li><li>Interactive experiences</li><li>Motion graphics</li><li>Video editing</li><li>Digital artwork</li><li>UI concepts</li><li>Audio</li><li>Original music</li><li>Multimedia experiences</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section experience" id="about" aria-labelledby="experience-title">
+        <div class="shell experience-grid">
+          <div class="experience-copy">
+            <h2 id="experience-title">Built by experience.</h2>
+            <p>DOM is operated by Dom, a multidisciplinary digital designer creating digital work since 1996. Rough ideas, existing assets, and unfinished concepts become modern, polished, professional work quickly.</p>
+            <p>Creative design and technical production live in one process, so many small digital projects can move without coordinating multiple specialists.</p>
+          </div>
+          <dl class="trust-points">
+            <div><dt>Digital Media Degree</dt><dd>Design principles backed by formal training.</dd></div>
+            <div><dt>IT Certified</dt><dd>Technical understanding built into the work.</dd></div>
+            <div><dt>Hundreds of Finished Projects</dt><dd>Range across commercial and experimental work.</dd></div>
+            <div><dt>Web + Design + Multimedia</dt><dd>One maker across connected disciplines.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="napkin-cta" aria-labelledby="napkin-title">
+        <div class="shell napkin-grid">
+          <div>
+            <h2 id="napkin-title">Have an idea you want to bring to life?</h2>
+            <p>You do not need to know the right software or terminology. Show DOM what you have.</p>
+            <a class="button button-purchase" href="#start">Send Your Idea</a>
+          </div>
+          <ul aria-label="Things you can send DOM">
+            <li>Your idea</li><li>A description</li><li>A rough drawing</li><li>A screenshot</li><li>An existing asset</li><li>A reference</li><li><strong>Even a napkin sketch</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section project-start" id="start" aria-labelledby="start-title">
+        <div class="shell start-grid">
+          <div class="start-intro">
+            <h2 id="start-title">Start a project</h2>
+            <p>Choose the closest fit, describe the result you need, and include whatever material you already have.</p>
+            <div class="start-contact"><span>Email DOM directly</span><a href="mailto:domcalvello@gmail.com">domcalvello@gmail.com</a></div>
+          </div>
+          <form class="project-form" data-project-form novalidate>
+            <div class="field-grid">
+              <div class="field">
+                <label for="project-service">What do you need?</label>
+                <select id="project-service" name="service" aria-describedby="project-service-error" required>
+                  <option value="">Choose a service</option>
+                  <option>Website Visual Upgrade</option>
+                  <option>Website Hero / Digital Artwork</option>
+                  <option>eBay &amp; Collectibles Listing Images</option>
+                  <option>Logo &amp; Web Asset Kit</option>
+                  <option>Product Visualization</option>
+                  <option>Something Else</option>
+                </select>
+                <span class="field-error" id="project-service-error" data-error-for="project-service"></span>
+              </div>
+              <div class="field">
+                <label for="project-package">Package</label>
+                <select id="project-package" name="package" aria-describedby="project-package-error" required disabled>
+                  <option value="">Choose a service first</option>
+                </select>
+                <span class="field-error" id="project-package-error" data-error-for="project-package"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="project-description">Tell DOM what you need</label>
+              <textarea id="project-description" name="description" rows="6" placeholder="What should be made, what is already working, and what result do you need?" aria-describedby="project-description-hint project-description-error" required minlength="20"></textarea>
+              <span class="field-hint" id="project-description-hint">A few useful details are enough. Minimum 20 characters.</span>
+              <span class="field-error" id="project-description-error" data-error-for="project-description"></span>
+            </div>
+            <div class="field-grid">
+              <div class="field">
+                <label for="project-link">Show me what you have — link</label>
+                <input id="project-link" name="link" type="url" placeholder="https://your-site-or-file-link.com" aria-describedby="project-link-error" />
+                <span class="field-error" id="project-link-error" data-error-for="project-link"></span>
+              </div>
+              <div class="field">
+                <label for="project-files">Show me what you have — files</label>
+                <input id="project-files" name="files" type="file" multiple accept="image/*,.pdf,.zip,.svg,.ai,.psd" aria-describedby="project-file-status" />
+                <span class="field-hint" id="project-file-status" data-file-status>Files stay on your device until you attach them to the prepared email.</span>
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field">
+                <label for="project-name">Name</label>
+                <input id="project-name" name="name" type="text" autocomplete="name" aria-describedby="project-name-error" required />
+                <span class="field-error" id="project-name-error" data-error-for="project-name"></span>
+              </div>
+              <div class="field">
+                <label for="project-email">Email</label>
+                <input id="project-email" name="email" type="email" autocomplete="email" aria-describedby="project-email-error" required />
+                <span class="field-error" id="project-email-error" data-error-for="project-email"></span>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="button button-purchase" type="submit">Submit Project</button>
+              <button class="button button-outline copy-brief" type="button" data-copy-brief>Copy Project Brief</button>
+            </div>
+            <p class="form-note">Submitting opens a prepared email to DOM. Your browser does not upload files; attach selected files in the email before sending.</p>
+            <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-grid">
+        <div><strong>DOM</strong><span>Digital Object Maker</span><p>Need something digital? DOM makes it.</p></div>
+        <nav aria-label="Footer navigation"><a href="#services">Services</a><a href="#work">Work</a><a href="#process">How It Works</a><a href="#about">About</a></nav>
+        <div class="footer-contact"><span>Start a conversation</span><a href="mailto:domcalvello@gmail.com">domcalvello@gmail.com</a></div>
+      </div>
+      <div class="shell footer-bottom"><span>© <span data-year></span> DOM. All rights reserved.</span><a href="#top">Back to top</a></div>
+    </footer>
+  </body>
+</html>

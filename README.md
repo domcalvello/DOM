@@ -2,12 +2,12 @@
 
 Static single-page site for DOM digital design services.
 
-## GitHub Pages
+## Manual GitHub Pages upload
 
-This repository is configured to publish the `dist/` directory with GitHub Actions.
+The website is a static site—no build command or server is needed. A ready-to-upload copy is available locally in `docs/`, and its contents are also bundled in `DOM-github-pages-upload.zip`.
 
-1. Push the repository to GitHub with the default branch named `main`.
-2. In **Settings → Pages**, set **Source** to **GitHub Actions**.
-3. Push to `main` (or run **Deploy DOM to GitHub Pages** from the Actions tab).
+1. Upload the **contents** of `docs/` to a `docs` folder on the `main` branch. Do not upload the ZIP itself.
+2. In **Settings → Pages**, choose **Deploy from a branch**.
+3. Select branch **main** and folder **/docs**, then save.
 
-The workflow keeps the site private to the repository until GitHub Pages visibility is configured by the repository owner.
+GitHub will publish it at `https://domcalvello.github.io/DOM/`.

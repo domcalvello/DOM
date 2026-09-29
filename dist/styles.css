@@ -560,7 +560,7 @@ textarea {
 
 .media-output-two img {
   object-position: 78% 56%;
-  transform: scale(1.72);
+  transform: scale(1.72) translateY(14%);
   transform-origin: 78% 56%;
 }
 

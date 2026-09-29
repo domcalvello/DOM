@@ -204,6 +204,14 @@ textarea {
   text-decoration: none;
 }
 
+.brand-logo {
+  width: 104px;
+  height: 62px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
 .brand-mark {
   color: var(--gold);
   font-size: 2rem;
@@ -706,6 +714,14 @@ textarea {
   transition: transform 700ms var(--ease-out);
 }
 
+.product-media video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background: #05080b;
+}
+
 .service-product:hover .product-media img {
   transform: scale(1.025);
 }
@@ -716,6 +732,120 @@ textarea {
 
 .product-media-square img {
   object-position: center;
+}
+
+.product-media-motion video {
+  object-position: 50% 48%;
+}
+
+.motion-asset-label {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+  display: grid;
+  gap: 2px;
+  padding: 9px 11px;
+  color: #fff;
+  background: rgba(19, 25, 33, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.motion-asset-label strong {
+  color: var(--gold);
+  font-size: 0.76rem;
+}
+
+.listing-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3px;
+  padding: 3px;
+  background: var(--navy-950);
+}
+
+.listing-compare figure {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.listing-compare figure img {
+  transform: none;
+  transition: none;
+}
+
+.service-product:hover .listing-compare figure img {
+  transform: none;
+}
+
+.listing-compare figcaption {
+  position: absolute;
+  inset: 0 auto auto 0;
+  padding: 9px 10px;
+  color: #fff;
+  background: rgba(19, 25, 33, 0.88);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.asset-kit-preview {
+  background: #070a0f;
+}
+
+.asset-kit-stage {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: minmax(0, 1fr) auto auto;
+  align-items: end;
+  gap: 13px 8px;
+  padding: 42px 30px 98px;
+}
+
+.asset-kit-stage .asset-kit-logo {
+  grid-column: 1 / -1;
+  width: min(88%, 530px);
+  height: auto;
+  max-height: 270px;
+  justify-self: center;
+  align-self: center;
+  object-fit: contain;
+  transform: none;
+  transition: none;
+}
+
+.asset-kit-stage .asset-kit-divider {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: auto;
+  max-height: 90px;
+  object-fit: contain;
+  transform: none;
+  transition: none;
+}
+
+.service-product:hover .asset-kit-stage img {
+  transform: none;
+}
+
+.asset-kit-stage span {
+  padding-top: 9px;
+  color: #d5e2eb;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .product-media-meta {
@@ -2073,8 +2203,13 @@ textarea {
     font-size: 0.67rem;
   }
 
-  .brand-mark {
-    font-size: 1.75rem;
+  .brand-logo {
+    width: 102px;
+    height: 61px;
+  }
+
+  .brand-expansion {
+    display: none;
   }
 
   .hero-grid {
@@ -2189,6 +2324,35 @@ textarea {
   .product-media {
     min-height: 280px;
     aspect-ratio: 4 / 3;
+  }
+
+  .motion-asset-label {
+    top: 12px;
+    left: 12px;
+    font-size: 0.7rem;
+  }
+
+  .listing-compare figcaption {
+    padding: 7px 8px;
+    font-size: 0.7rem;
+  }
+
+  .asset-kit-stage {
+    gap: 9px 7px;
+    padding: 22px 18px 82px;
+  }
+
+  .asset-kit-stage .asset-kit-logo {
+    width: 96%;
+    max-height: 150px;
+  }
+
+  .asset-kit-stage .asset-kit-divider {
+    max-height: 54px;
+  }
+
+  .asset-kit-stage span {
+    font-size: 0.7rem;
   }
 
   .product-body {
@@ -2408,5 +2572,13 @@ textarea {
   .motion-ready .reveal {
     transform: none;
     filter: none;
+  }
+
+  .product-media-motion {
+    background: #05080b url("assets/magnus-expansion.png") center / cover no-repeat;
+  }
+
+  .product-media-motion video {
+    display: none;
   }
 }

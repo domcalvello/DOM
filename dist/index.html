@@ -24,7 +24,7 @@
     <header class="site-header" data-header>
       <div class="shell nav-row">
         <a class="brand" href="#top" aria-label="DOM, Digital Object Maker, home">
-          <span class="brand-mark">DOM</span>
+          <img class="brand-logo" src="assets/dom-logo.png" alt="DOM" width="360" height="216" />
           <span class="brand-expansion">Digital Object Maker</span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
@@ -74,16 +74,16 @@
 
           <div class="hero-media" aria-label="Selected DOM project work">
             <figure class="media-main">
-              <img src="assets/byte-vermin-online.jpg" alt="BYTE VERMIN product visualization showing a digital collectible beside its online collector portal" width="1432" height="875" />
-              <figcaption><span>BYTE VERMIN</span><span>Concept · Product · Web</span></figcaption>
+              <img src="assets/system-strike.webp" alt="System Strike visual system for a cybersecurity game concept" width="1938" height="812" />
+              <figcaption><span>System Strike</span><span>Game concept · Visual system</span></figcaption>
             </figure>
             <figure class="media-small media-output-one">
-              <img src="assets/docklight.jpg" alt="Docklight Lobster House website design" width="1800" height="1027" />
-              <figcaption><span>Website</span><span>Web design</span></figcaption>
+              <img src="assets/mj-stereo.webp" alt="M and J Stereo Receiver interactive browser interface" width="1384" height="1058" />
+              <figcaption><span>Interactive</span><span>Web experience</span></figcaption>
             </figure>
             <figure class="media-small media-output-two">
-              <img src="assets/red-white-bruised.webp" alt="Red White and Bruised logo and web asset design" width="1254" height="1254" />
-              <figcaption><span>Brand mark</span><span>Web assets</span></figcaption>
+              <img src="assets/neighbors-packaging.webp" alt="The Neighbors retro toy package concept" width="1448" height="1086" />
+              <figcaption><span>Packaging</span><span>Concept art</span></figcaption>
             </figure>
           </div>
         </div>
@@ -106,9 +106,12 @@
 
         <div class="shell service-list" data-service-list>
           <article class="service-product" data-service="Website Visual Upgrade" data-keywords="website web page visual upgrade redesign responsive hero typography spacing buttons cards animation">
-            <div class="product-media">
-              <img src="assets/docklight.jpg" alt="Docklight Lobster House responsive website concept with bold restaurant hero design" width="1800" height="1027" loading="lazy" decoding="async" />
-              <div class="product-media-meta"><span>Website design</span><strong>Starts at $49</strong></div>
+            <div class="product-media product-media-motion">
+              <video poster="assets/magnus-expansion.png" autoplay muted loop playsinline preload="metadata" aria-label="Magnus Oculus exploded optical device visual used as a still image and motion asset">
+                <source src="assets/magnus-expansion.mp4" type="video/mp4" />
+              </video>
+              <div class="motion-asset-label"><span>Magnus Oculus</span><strong>Still + motion asset</strong></div>
+              <div class="product-media-meta"><span>Website visual upgrade</span><strong>Starts at $49</strong></div>
             </div>
             <div class="product-body">
               <header>
@@ -137,7 +140,7 @@
                 </div>
                 <div class="package-panel" id="website-upgrade">
                   <h4>Level 2 — Visual Upgrade <span>Most Popular</span></h4>
-                  <ul><li>One existing page</li><li>Up to 3 substantial visual improvements</li><li>Responsive implementation</li><li>Interaction or animation where appropriate</li><li>Desktop + mobile polish</li></ul>
+                  <ul><li>One existing page</li><li>Up to 3 substantial visual improvements</li><li>Responsive implementation</li><li>A still image + short animation can count as one selected improvement where appropriate</li><li>Desktop + mobile polish</li></ul>
                 </div>
                 <div class="package-panel" id="website-polish" hidden>
                   <h4>Level 3 — Page Polish</h4>
@@ -150,7 +153,7 @@
 
           <article class="service-product service-product-reverse" data-service="Website Hero / Digital Artwork" data-keywords="custom website hero digital artwork image banner web imagery concepts mobile crop supporting assets">
             <div class="product-media">
-              <img src="assets/magnus-oculus.jpg" alt="Magnus Oculus website hero featuring a cinematic optical instrument and immersive interface" width="1800" height="1229" loading="lazy" decoding="async" />
+              <img src="assets/magnus-website.jpg" alt="Magnus Oculus website hero with an optical instrument, editorial typography, and interactive controls" width="1800" height="1229" loading="lazy" decoding="async" />
               <div class="product-media-meta"><span>Custom website imagery</span><strong>Starts at $39</strong></div>
             </div>
             <div class="product-body">
@@ -183,8 +186,15 @@
           </article>
 
           <article class="service-product" data-service="eBay & Collectibles Listing Images" data-keywords="ebay ecommerce listing images collectibles tcg graded cards lego figures product photo cleanup template">
-            <div class="product-media product-media-portrait">
-              <img src="assets/gag-slab.webp" alt="G.A.G. graded AOL trial CD product concept presented in a clear collectibles slab" width="1086" height="1448" loading="lazy" decoding="async" />
+            <div class="product-media listing-compare" aria-label="Side-by-side listing image example">
+              <figure>
+                <img src="assets/ebay-source.jpeg" alt="Original source photograph of a Thrasher sticker set" width="2638" height="3057" loading="lazy" decoding="async" />
+                <figcaption>Source photo</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/ebay-listing-ready.jpg" alt="Clean listing-ready presentation of a Thrasher sticker set" width="1034" height="1200" loading="lazy" decoding="async" />
+                <figcaption>Listing-ready presentation</figcaption>
+              </figure>
               <div class="product-media-meta"><span>Collectibles + ecommerce</span><strong>Starts at $25</strong></div>
             </div>
             <div class="product-body">
@@ -211,8 +221,12 @@
           </article>
 
           <article class="service-product service-product-reverse" data-service="Logo & Web Asset Kit" data-keywords="logo web asset kit png webp favicon icon light dark social avatar header footer cleanup export ratios">
-            <div class="product-media product-media-square">
-              <img src="assets/red-white-bruised.webp" alt="Red White and Bruised dimensional logo asset in red white and blue" width="1254" height="1254" loading="lazy" decoding="async" />
+            <div class="product-media asset-kit-preview">
+              <div class="asset-kit-stage" aria-label="BYTE VERMIN logo and divider asset set">
+                <img class="asset-kit-logo" src="assets/byte-vermin-logo-black.png" alt="BYTE VERMIN logo export" width="1200" height="731" loading="lazy" decoding="async" />
+                <img class="asset-kit-divider" src="assets/byte-vermin-glitch-divider.png" alt="BYTE VERMIN glitch divider export" width="1600" height="533" loading="lazy" decoding="async" />
+                <span>Logo</span><span>Divider</span><span>Favicon</span><span>Social crop</span>
+              </div>
               <div class="product-media-meta"><span>Brand production assets</span><strong>Starts at $29</strong></div>
             </div>
             <div class="product-body">
@@ -237,7 +251,7 @@
 
           <article class="service-product" data-service="Product Visualization" data-keywords="concept product visualization rough idea sketch drawing description render lifestyle detail inventor startup kickstarter etsy">
             <div class="product-media">
-              <img src="assets/legacy-devices.webp" alt="Legacy Device Group Therapy product visualization featuring anthropomorphic vintage technology" width="1536" height="1024" loading="lazy" decoding="async" />
+              <img src="assets/byte-vermin-online.jpg" alt="Finished BYTE VERMIN digital product visualization and collector portal" width="1432" height="875" loading="lazy" decoding="async" />
               <div class="product-media-meta"><span>Concept → product</span><strong>Starts at $59</strong></div>
             </div>
             <div class="product-body">

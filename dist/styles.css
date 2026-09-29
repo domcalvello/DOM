@@ -760,7 +760,8 @@ textarea {
   font-size: 0.76rem;
 }
 
-.listing-compare {
+.listing-compare,
+.concept-compare {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 3px;
@@ -768,7 +769,8 @@ textarea {
   background: var(--navy-950);
 }
 
-.listing-compare figure {
+.listing-compare figure,
+.concept-compare figure {
   position: relative;
   min-width: 0;
   margin: 0;
@@ -776,16 +778,19 @@ textarea {
   background: #fff;
 }
 
-.listing-compare figure img {
+.listing-compare figure img,
+.concept-compare figure img {
   transform: none;
   transition: none;
 }
 
-.service-product:hover .listing-compare figure img {
+.service-product:hover .listing-compare figure img,
+.service-product:hover .concept-compare figure img {
   transform: none;
 }
 
-.listing-compare figcaption {
+.listing-compare figcaption,
+.concept-compare figcaption {
   position: absolute;
   inset: 0 auto auto 0;
   padding: 9px 10px;
@@ -799,6 +804,59 @@ textarea {
 
 .asset-kit-preview {
   background: #070a0f;
+}
+
+.circus-kit-stage {
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(150px, 0.8fr);
+  gap: 6px;
+  padding: 6px;
+  background: #080504;
+}
+
+.circus-kit-stage img {
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transform: none;
+  transition: none;
+}
+
+.circus-kit-board {
+  object-position: center;
+}
+
+.circus-kit-supporting {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: 0.92fr 1.08fr;
+  gap: 6px;
+}
+
+.circus-kit-supporting > img {
+  object-position: center;
+}
+
+.circus-kit-supporting > div {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.circus-kit-supporting > div img:first-child {
+  object-position: center;
+}
+
+.circus-kit-supporting > div img:last-child {
+  object-position: center;
+}
+
+.service-product:hover .circus-kit-stage img {
+  transform: none;
 }
 
 .asset-kit-stage {
@@ -2332,9 +2390,21 @@ textarea {
     font-size: 0.7rem;
   }
 
-  .listing-compare figcaption {
+  .listing-compare figcaption,
+  .concept-compare figcaption {
     padding: 7px 8px;
     font-size: 0.7rem;
+  }
+
+  .circus-kit-stage {
+    grid-template-columns: minmax(0, 1.1fr) minmax(126px, 0.9fr);
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .circus-kit-supporting,
+  .circus-kit-supporting > div {
+    gap: 4px;
   }
 
   .asset-kit-stage {

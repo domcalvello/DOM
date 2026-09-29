@@ -24,7 +24,7 @@ const servicePackages = {
     'Level 2 — Visual Upgrade — $99',
     'Level 3 — Page Polish — $179',
   ],
-  'Website Hero / Digital Artwork': ['Basic — $39', 'Standard — $69', 'Premium — $119'],
+  'Website Banner / Digital Artwork': ['Basic — $39', 'Standard — $69', 'Premium — $119'],
   'eBay & Collectibles Listing Images': ['5 Images — $25', '15 Images — $49', '30 Images — $79'],
   'Logo & Web Asset Kit': ['Basic — $29', 'Standard — $49', 'Premium — $79'],
   'Product Visualization': ['Basic — $59', 'Standard — $99', 'Premium — $149'],
@@ -246,6 +246,19 @@ document.querySelector('[data-copy-brief]')?.addEventListener('click', async () 
 });
 
 document.querySelector('[data-year]').textContent = String(new Date().getFullYear());
+
+document.querySelectorAll('[data-compare-slider]').forEach((slider) => {
+  const range = slider.querySelector('[data-compare-range]');
+  if (!range) return;
+
+  const setComparePosition = () => {
+    slider.style.setProperty('--compare-position', `${range.value}%`);
+  };
+
+  range.addEventListener('input', setComparePosition);
+  range.addEventListener('change', setComparePosition);
+  setComparePosition();
+});
 
 const reduceMotion = reducedMotionQuery.matches;
 if (!reduceMotion && 'IntersectionObserver' in window) {

@@ -82,8 +82,8 @@
               <figcaption><span>Interactive</span><span>Web experience</span></figcaption>
             </figure>
             <figure class="media-small media-output-two">
-              <img src="assets/neighbors-packaging.webp" alt="The Neighbors retro toy package concept" width="1448" height="1086" />
-              <figcaption><span>Packaging</span><span>Concept art</span></figcaption>
+              <img src="assets/shooter-mcnappin.png" alt="Shooter McNappin 3D character concept" width="1100" height="1100" />
+              <figcaption><span>Logo</span><span>Concept art</span></figcaption>
             </figure>
           </div>
         </div>
@@ -105,12 +105,19 @@
         </div>
 
         <div class="shell service-list" data-service-list>
-          <article class="service-product" data-service="Website Visual Upgrade" data-keywords="website web page visual upgrade redesign responsive hero typography spacing buttons cards animation">
-            <div class="product-media product-media-motion">
-              <video poster="assets/magnus-expansion.png" autoplay muted loop playsinline preload="metadata" aria-label="Magnus Oculus exploded optical device visual used as a still image and motion asset">
-                <source src="assets/magnus-expansion.mp4" type="video/mp4" />
-              </video>
-              <div class="motion-asset-label"><span>Magnus Oculus</span><strong>Still + motion asset</strong></div>
+          <article class="service-product" data-service="Website Visual Upgrade" data-keywords="website web page visual upgrade redesign responsive banner typography spacing buttons cards animation">
+            <div class="product-media compare-slider" data-compare-slider style="--compare-position: 50%;" aria-label="Olcott Lobster Company website before and after visual upgrade">
+              <div class="compare-canvas">
+                <img class="compare-image compare-after" src="assets/docklight-custom-hero.jpg" alt="Updated Lobster House website banner with bold typography and conversion actions" width="1800" height="1027" loading="lazy" decoding="async" />
+                <div class="compare-before">
+                  <img class="compare-image" src="assets/lobster-original-page.jpg" alt="Original Olcott Lobster Company website page" width="1800" height="1211" loading="lazy" decoding="async" />
+                </div>
+                <span class="compare-divider" aria-hidden="true"><i></i></span>
+                <span class="compare-label compare-label-before">Original page</span>
+                <span class="compare-label compare-label-after">DOM upgrade</span>
+                <label class="visually-hidden" for="lobster-compare">Drag to compare the original lobster website and DOM upgrade</label>
+                <input id="lobster-compare" class="compare-range" type="range" min="0" max="100" value="50" data-compare-range />
+              </div>
               <div class="product-media-meta"><span>Website visual upgrade</span><strong>Starts at $49</strong></div>
             </div>
             <div class="product-body">
@@ -144,21 +151,24 @@
                 </div>
                 <div class="package-panel" id="website-polish" hidden>
                   <h4>Level 3 — Page Polish</h4>
-                  <ul><li>One complete page</li><li>Up to approximately 6 visual improvements</li><li>Hero, typography, spacing, layout, buttons, and cards</li><li>Background treatment + responsive cleanup</li><li>Performance sanity check</li></ul>
+                  <ul><li>One complete page</li><li>Up to approximately 6 visual improvements</li><li>Banner, typography, spacing, layout, buttons, and cards</li><li>Background treatment + responsive cleanup</li><li>Performance sanity check</li></ul>
                 </div>
               </div>
               <button class="button button-blue choose-package" type="button" data-service-choice>Choose Package</button>
             </div>
           </article>
 
-          <article class="service-product service-product-reverse" data-service="Website Hero / Digital Artwork" data-keywords="custom website hero digital artwork image banner web imagery concepts mobile crop supporting assets">
-            <div class="product-media">
-              <img src="assets/docklight-custom-hero.jpg" alt="Docklight Lobster House custom website hero with food photography, bold type, and conversion actions" width="1800" height="1027" loading="lazy" decoding="async" />
+          <article class="service-product service-product-reverse" data-service="Website Banner / Digital Artwork" data-keywords="custom website banner digital artwork image web imagery concepts mobile crop supporting assets">
+            <div class="product-media product-media-motion">
+              <video poster="assets/magnus-expansion.png" autoplay muted loop playsinline preload="metadata" aria-label="Magnus Oculus exploded optical device visual used as a still image and motion asset">
+                <source src="assets/magnus-expansion.mp4" type="video/mp4" />
+              </video>
+              <div class="motion-asset-label"><span>Magnus Oculus</span><strong>Banner still + motion</strong></div>
               <div class="product-media-meta"><span>Custom website imagery</span><strong>Starts at $39</strong></div>
             </div>
             <div class="product-body">
               <header>
-                <h3>Custom Website Hero</h3>
+                <h3>Custom Website Banner</h3>
                 <p>Professional custom website imagery designed around your brand, copy, and layout.</p>
               </header>
               <fieldset class="package-picker" data-package-picker>
@@ -177,9 +187,9 @@
                 </label>
               </fieldset>
               <div class="package-panels">
-                <div class="package-panel" id="hero-basic"><h4>Basic</h4><ul><li>1 concept</li><li>Desktop hero</li><li>PNG + web-optimized version</li></ul></div>
-                <div class="package-panel" id="hero-standard" hidden><h4>Standard</h4><ul><li>3 concepts</li><li>Selected desktop hero + mobile crop</li><li>PNG + web-optimized version</li><li>Text-safe composition</li></ul></div>
-                <div class="package-panel" id="hero-premium" hidden><h4>Premium</h4><ul><li>3 concepts</li><li>Desktop + mobile hero</li><li>3 supporting visual assets</li><li>Web optimization</li></ul></div>
+                <div class="package-panel" id="hero-basic"><h4>Basic</h4><ul><li>1 concept</li><li>Desktop banner</li><li>PNG + web-optimized version</li></ul></div>
+                <div class="package-panel" id="hero-standard" hidden><h4>Standard</h4><ul><li>3 concepts</li><li>Selected desktop banner + mobile crop</li><li>PNG + web-optimized version</li><li>Text-safe composition</li></ul></div>
+                <div class="package-panel" id="hero-premium" hidden><h4>Premium</h4><ul><li>3 concepts</li><li>Desktop + mobile banner</li><li>3 supporting visual assets</li><li>Web optimization</li></ul></div>
               </div>
               <button class="button button-blue choose-package" type="button" data-service-choice>Choose Package</button>
             </div>
@@ -225,7 +235,7 @@
               <div class="circus-kit-stage" aria-label="Circus Circus full logo and web asset package">
                 <img class="circus-kit-board" src="assets/circus-brand-assets.png" alt="Circus Circus brand system presentation with logo variations, color palette, icons, and application mockups" width="1000" height="750" loading="lazy" decoding="async" />
                 <div class="circus-kit-supporting">
-                  <img src="assets/circus-primary-logo.png" alt="Circus Circus primary logo export" width="1000" height="563" loading="lazy" decoding="async" />
+                  <img src="assets/circus-front.png" alt="Circus Circus visual campaign image" width="1200" height="675" loading="lazy" decoding="async" />
                   <div>
                     <img src="assets/circus-monogram.png" alt="Circus Circus monogram export" width="900" height="900" loading="lazy" decoding="async" />
                     <img src="assets/circus-tent-icon.png" alt="Circus Circus tent icon export" width="1000" height="500" loading="lazy" decoding="async" />
@@ -255,15 +265,18 @@
           </article>
 
           <article class="service-product" data-service="Product Visualization" data-keywords="concept product visualization rough idea sketch drawing description render lifestyle detail inventor startup kickstarter etsy">
-            <div class="product-media concept-compare" aria-label="Sketch-to-finished product visualization example">
-              <figure>
-                <img src="assets/rough-sketch.jpg" alt="Rough hand-drawn concept sketch" width="1600" height="1425" loading="lazy" decoding="async" />
-                <figcaption>Rough sketch</figcaption>
-              </figure>
-              <figure>
-                <img src="assets/byte-vermin-online.jpg" alt="Finished BYTE VERMIN digital product visualization and collector portal" width="1432" height="875" loading="lazy" decoding="async" />
-                <figcaption>Finished product</figcaption>
-              </figure>
+            <div class="product-media compare-slider" data-compare-slider style="--compare-position: 50%;" aria-label="Sketch-to-finished product visualization example">
+              <div class="compare-canvas">
+                <img class="compare-image compare-after" src="assets/byte-vermin-online.jpg" alt="Finished BYTE VERMIN digital product visualization and collector portal" width="1432" height="875" loading="lazy" decoding="async" />
+                <div class="compare-before">
+                  <img class="compare-image" src="assets/rough-sketch.jpg" alt="Rough hand-drawn concept sketch" width="1600" height="1425" loading="lazy" decoding="async" />
+                </div>
+                <span class="compare-divider" aria-hidden="true"><i></i></span>
+                <span class="compare-label compare-label-before">Rough sketch</span>
+                <span class="compare-label compare-label-after">Finished product</span>
+                <label class="visually-hidden" for="concept-compare">Drag to compare a rough sketch and finished product visualization</label>
+                <input id="concept-compare" class="compare-range" type="range" min="0" max="100" value="50" data-compare-range />
+              </div>
               <div class="product-media-meta"><span>Concept → product</span><strong>Starts at $59</strong></div>
             </div>
             <div class="product-body">
@@ -280,7 +293,7 @@
               <div class="package-panels">
                 <div class="package-panel" id="visual-basic"><h4>Basic</h4><ul><li>1 polished concept image</li></ul></div>
                 <div class="package-panel" id="visual-standard" hidden><h4>Standard</h4><ul><li>3 polished product views</li></ul></div>
-                <div class="package-panel" id="visual-premium" hidden><h4>Premium</h4><ul><li>Hero render</li><li>Product view</li><li>Lifestyle or context image</li><li>Detail image</li></ul></div>
+                <div class="package-panel" id="visual-premium" hidden><h4>Premium</h4><ul><li>Banner render</li><li>Product view</li><li>Lifestyle or context image</li><li>Detail image</li></ul></div>
               </div>
               <button class="button button-blue choose-package" type="button" data-service-choice>Choose Package</button>
             </div>
@@ -306,7 +319,7 @@
           <div class="featured-scope">
             <h3>Choose up to three substantial improvements</h3>
             <div class="scope-grid" aria-label="Potential improvement areas">
-              <span>Hero</span><span>Typography</span><span>Spacing</span><span>Buttons</span><span>Cards</span><span>Backgrounds</span><span>Animation</span><span>Responsive refinement</span>
+              <span>Banner</span><span>Typography</span><span>Spacing</span><span>Buttons</span><span>Cards</span><span>Backgrounds</span><span>Animation</span><span>Responsive refinement</span>
             </div>
             <p>The package does not promise every item shown. You choose up to three that best fit the page.</p>
           </div>
@@ -348,24 +361,26 @@
           <div><span>Existing page</span><b>DOM</b><strong>Polished website</strong></div>
           <div><span>Raw product photo</span><b>DOM</b><strong>Listing ready</strong></div>
           <div><span>Logo file</span><b>DOM</b><strong>Complete web asset kit</strong></div>
-          <div><span>Creative brief</span><b>DOM</b><strong>Website hero</strong></div>
+          <div><span>Creative brief</span><b>DOM</b><strong>Website banner</strong></div>
         </div>
       </section>
 
       <section class="section selected-work" id="work" aria-labelledby="work-title">
         <div class="shell section-heading work-heading">
           <div><h2 id="work-title">Selected work</h2><p>A focused view of web, branding, product concepts, interface design, and digital artwork.</p></div>
-          <span>8 selected projects</span>
+          <span>10 selected projects</span>
         </div>
         <div class="shell work-grid">
           <figure class="work-item work-wide"><img src="assets/byte-vermin-online.jpg" alt="BYTE VERMIN digital collectible and web portal" width="1432" height="875" loading="lazy" decoding="async" /><figcaption><strong>BYTE VERMIN</strong><span>Product visualization · Web</span></figcaption></figure>
-          <figure class="work-item work-tall"><img src="assets/neighbors-packaging.webp" alt="The Neighbors retro toy package concept" width="1448" height="1086" loading="lazy" decoding="async" /><figcaption><strong>The Neighbors</strong><span>Packaging · Concept art</span></figcaption></figure>
+          <figure class="work-item work-tall"><img src="assets/neighbors-packaging.webp" alt="The Neighbors retro toy package concept" width="1448" height="1086" loading="lazy" decoding="async" /><figcaption><strong>The Neighbors</strong><span>Logo · Concept art</span></figcaption></figure>
           <figure class="work-item"><img src="assets/docklight.jpg" alt="Docklight Lobster House website design" width="1800" height="1027" loading="lazy" decoding="async" /><figcaption><strong>Docklight Lobster House</strong><span>Website design</span></figcaption></figure>
           <figure class="work-item"><img src="assets/mj-stereo.webp" alt="M and J Stereo Receiver interactive browser interface" width="1384" height="1058" loading="lazy" decoding="async" /><figcaption><strong>M&amp;J Stereo Receiver</strong><span>Interactive experience</span></figcaption></figure>
           <figure class="work-item work-wide"><img src="assets/system-strike.webp" alt="System Strike cybersecurity game visual system" width="1938" height="812" loading="lazy" decoding="async" /><figcaption><strong>System Strike</strong><span>Game concept · Visual system</span></figcaption></figure>
           <figure class="work-item"><img src="assets/legacy-devices.webp" alt="Legacy Device Group Therapy dimensional artwork" width="1536" height="1024" loading="lazy" decoding="async" /><figcaption><strong>Legacy Device Group Therapy</strong><span>Digital artwork · Concept</span></figcaption></figure>
           <figure class="work-item"><img src="assets/magnus-oculus.jpg" alt="Magnus Oculus immersive website concept" width="1800" height="1229" loading="lazy" decoding="async" /><figcaption><strong>Magnus Oculus</strong><span>Website concept · Motion</span></figcaption></figure>
           <figure class="work-item work-square"><img src="assets/red-white-bruised.webp" alt="Red White and Bruised logo design" width="1254" height="1254" loading="lazy" decoding="async" /><figcaption><strong>Red, White &amp; Bruised</strong><span>Logo · Web assets</span></figcaption></figure>
+          <figure class="work-item"><img src="assets/shooter-mcnappin.png" alt="Shooter McNappin 3D character concept" width="1100" height="1100" loading="lazy" decoding="async" /><figcaption><strong>Shooter McNappin</strong><span>3D Character · Concept art</span></figcaption></figure>
+          <figure class="work-item work-wide"><img src="assets/circus-site.jpg" alt="Circus Circus brand website concept" width="1500" height="1108" loading="lazy" decoding="async" /><figcaption><strong>Circus Circus</strong><span>Branding · Website concept</span></figcaption></figure>
         </div>
       </section>
 
@@ -421,7 +436,7 @@
                 <select id="project-service" name="service" aria-describedby="project-service-error" required>
                   <option value="">Choose a service</option>
                   <option>Website Visual Upgrade</option>
-                  <option>Website Hero / Digital Artwork</option>
+                  <option>Website Banner / Digital Artwork</option>
                   <option>eBay &amp; Collectibles Listing Images</option>
                   <option>Logo &amp; Web Asset Kit</option>
                   <option>Product Visualization</option>

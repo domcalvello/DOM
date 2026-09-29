@@ -559,7 +559,9 @@ textarea {
 }
 
 .media-output-two img {
-  object-position: center;
+  object-position: 78% 56%;
+  transform: scale(1.72);
+  transform-origin: 78% 56%;
 }
 
 .hero-output-tag {
@@ -768,7 +770,7 @@ textarea {
   inset: 0;
   width: 100%;
   clip-path: inset(0 calc(100% - var(--compare-position)) 0 0);
-  border-right: 1px solid rgba(255, 255, 255, 0.82);
+  border-right: 2px solid var(--gold);
 }
 
 .compare-divider {
@@ -781,7 +783,7 @@ textarea {
   display: grid;
   place-items: center;
   color: var(--navy-950);
-  background: #fff;
+  background: var(--gold);
   pointer-events: none;
   transform: translateX(-1px);
 }
@@ -793,7 +795,7 @@ textarea {
   display: block;
   border: 2px solid var(--navy-950);
   border-radius: 50%;
-  background: #fff;
+  background: var(--gold);
   box-shadow: 0 5px 14px rgba(19, 25, 33, 0.25);
 }
 
@@ -802,10 +804,10 @@ textarea {
   content: "";
   position: absolute;
   top: 50%;
-  width: 7px;
-  height: 7px;
-  border-top: 2px solid var(--navy-950);
-  border-right: 2px solid var(--navy-950);
+  width: 8px;
+  height: 8px;
+  border-top: 3px solid var(--navy-950);
+  border-right: 3px solid var(--navy-950);
 }
 
 .compare-divider i::before {
@@ -823,8 +825,8 @@ textarea {
   z-index: 2;
   top: 16px;
   padding: 8px 10px;
-  color: #fff;
-  background: rgba(19, 25, 33, 0.9);
+  color: var(--navy-950);
+  background: var(--gold);
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.05em;
@@ -864,7 +866,7 @@ textarea {
   height: 42px;
   border: 2px solid var(--navy-950);
   border-radius: 50%;
-  background: #fff;
+  background: var(--gold);
 }
 
 .service-product:hover .compare-canvas .compare-image {

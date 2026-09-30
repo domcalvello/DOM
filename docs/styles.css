@@ -842,6 +842,51 @@ textarea {
   right: 16px;
 }
 
+.service-product[data-service="Website Visual Upgrade"] .compare-canvas {
+  --compare-label-bar: 36px;
+}
+
+.service-product[data-service="Website Visual Upgrade"] .compare-canvas::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0 0 auto;
+  height: var(--compare-label-bar);
+  background: var(--navy-950);
+}
+
+.service-product[data-service="Website Visual Upgrade"] .compare-canvas > .compare-image {
+  top: var(--compare-label-bar);
+  bottom: auto;
+  height: calc(100% - var(--compare-label-bar));
+}
+
+.service-product[data-service="Website Visual Upgrade"] .compare-before {
+  top: var(--compare-label-bar);
+  bottom: auto;
+  height: calc(100% - var(--compare-label-bar));
+}
+
+.service-product[data-service="Website Visual Upgrade"] .compare-before .compare-image {
+  top: 0;
+  height: 100%;
+}
+
+.service-product[data-service="Website Visual Upgrade"] .compare-divider,
+.service-product[data-service="Website Visual Upgrade"] .compare-range {
+  top: var(--compare-label-bar);
+  bottom: auto;
+  height: calc(100% - var(--compare-label-bar));
+}
+
+.service-product[data-service="Website Visual Upgrade"] .compare-label {
+  z-index: 3;
+  top: 5px;
+  padding: 6px 8px;
+  font-size: 0.64rem;
+  line-height: 1;
+}
+
 .compare-range {
   position: absolute;
   z-index: 4;
@@ -2462,6 +2507,18 @@ textarea {
   .media-output-two {
     inset: 4% -1% auto auto;
     width: 28%;
+  }
+
+  .media-output-two img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 172%;
+    height: 172%;
+    max-width: none;
+    object-position: center;
+    transform: translate(-62%, -30%);
+    transform-origin: center;
   }
 
   .media-small figcaption {

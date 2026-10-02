@@ -275,6 +275,7 @@ textarea {
 .button-purchase {
   color: #261c00;
   background: var(--gold);
+  border: 0;
   box-shadow: 0 7px 18px rgba(19, 25, 33, 0.16);
 }
 
@@ -746,17 +747,27 @@ textarea {
 }
 
 .compare-canvas {
+  --compare-label-bar: clamp(38px, 4vw, 44px);
   position: absolute;
   inset: 0;
   overflow: hidden;
   background: #eff3f5;
 }
 
+.compare-canvas::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0 0 auto;
+  height: var(--compare-label-bar);
+  background: var(--navy-950);
+}
+
 .compare-canvas .compare-image {
   position: absolute;
-  inset: 0;
+  inset: var(--compare-label-bar) 0 auto;
   width: 100%;
-  height: 100%;
+  height: calc(100% - var(--compare-label-bar));
   display: block;
   object-fit: contain;
   background: #eff3f5;
@@ -767,19 +778,26 @@ textarea {
 .compare-before {
   position: absolute;
   z-index: 1;
-  inset: 0;
+  inset: var(--compare-label-bar) 0 auto;
   width: 100%;
+  height: calc(100% - var(--compare-label-bar));
   clip-path: inset(0 calc(100% - var(--compare-position)) 0 0);
   border-right: 2px solid var(--gold);
+}
+
+.compare-before .compare-image {
+  inset: 0;
+  height: 100%;
 }
 
 .compare-divider {
   position: absolute;
   z-index: 3;
-  top: 0;
-  bottom: 0;
+  top: var(--compare-label-bar);
+  bottom: auto;
   left: var(--compare-position);
   width: 2px;
+  height: calc(100% - var(--compare-label-bar));
   display: grid;
   place-items: center;
   color: var(--navy-950);
@@ -822,96 +840,47 @@ textarea {
 
 .compare-label {
   position: absolute;
-  z-index: 2;
-  top: 16px;
-  padding: 8px 10px;
+  z-index: 3;
+  top: 7px;
+  padding: 6px 8px;
   color: var(--navy-950);
   background: var(--gold);
   font-size: 0.7rem;
   font-weight: 800;
+  line-height: 1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   pointer-events: none;
 }
 
 .compare-label-before {
-  left: 16px;
+  left: 12px;
 }
 
 .compare-label-after {
-  right: 16px;
-}
-
-.service-product[data-service="Website Visual Upgrade"] .compare-canvas {
-  --compare-label-bar: 36px;
-}
-
-.service-product[data-service="Website Visual Upgrade"] .compare-canvas::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  inset: 0 0 auto;
-  height: var(--compare-label-bar);
-  background: var(--navy-950);
-}
-
-.service-product[data-service="Website Visual Upgrade"] .compare-canvas > .compare-image {
-  top: var(--compare-label-bar);
-  bottom: auto;
-  height: calc(100% - var(--compare-label-bar));
-}
-
-.service-product[data-service="Website Visual Upgrade"] .compare-before {
-  top: var(--compare-label-bar);
-  bottom: auto;
-  height: calc(100% - var(--compare-label-bar));
-}
-
-.service-product[data-service="Website Visual Upgrade"] .compare-before .compare-image {
-  top: 0;
-  height: 100%;
-}
-
-.service-product[data-service="Website Visual Upgrade"] .compare-divider,
-.service-product[data-service="Website Visual Upgrade"] .compare-range {
-  top: var(--compare-label-bar);
-  bottom: auto;
-  height: calc(100% - var(--compare-label-bar));
-}
-
-.service-product[data-service="Website Visual Upgrade"] .compare-label {
-  z-index: 3;
-  top: 5px;
-  padding: 6px 8px;
-  font-size: 0.64rem;
-  line-height: 1;
+  right: 12px;
 }
 
 .compare-range {
   position: absolute;
   z-index: 4;
-  inset: 0;
+  inset: var(--compare-label-bar) 0 auto;
   width: 100%;
-  height: 100%;
+  height: calc(100% - var(--compare-label-bar));
   margin: 0;
   appearance: none;
   opacity: 0;
   cursor: col-resize;
+  touch-action: pan-y;
 }
 
 .compare-range:focus-visible {
-  opacity: 1;
-  outline: 3px solid var(--blue);
-  outline-offset: -4px;
+  outline: 0;
 }
 
-.compare-range:focus-visible::-webkit-slider-thumb {
-  appearance: none;
-  width: 42px;
-  height: 42px;
-  border: 2px solid var(--navy-950);
-  border-radius: 50%;
-  background: var(--gold);
+.compare-slider:focus-within .compare-divider i {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
 }
 
 .service-product:hover .compare-canvas .compare-image {
@@ -1694,6 +1663,29 @@ textarea {
   transition: transform 650ms var(--ease-out), filter 350ms ease;
 }
 
+.work-buffalo img {
+  object-position: 50% 34%;
+}
+
+.work-system-strike img,
+.work-jackpot img {
+  object-position: 50% 0;
+}
+
+.work-rembrandt img {
+  object-position: 50% 42%;
+}
+
+.work-circus,
+.work-rembrandt {
+  grid-column: 1 / span 8;
+}
+
+.work-jackpot {
+  grid-column: 9 / span 4;
+  grid-row: span 2;
+}
+
 .work-item:hover img {
   transform: scale(1.035);
   filter: saturate(1.05);
@@ -2200,7 +2192,7 @@ textarea {
   .nav-cta {
     min-height: 44px;
     padding-inline: 13px;
-    font-size: 0.68rem;
+    font-size: 0.7rem;
   }
 
   .menu-toggle {
@@ -2341,6 +2333,11 @@ textarea {
 
   .product-media {
     min-height: 460px;
+    aspect-ratio: 16 / 10;
+  }
+
+  .product-media.compare-slider {
+    min-height: 0;
     aspect-ratio: 16 / 10;
   }
 
@@ -2574,6 +2571,20 @@ textarea {
   .product-media {
     min-height: 280px;
     aspect-ratio: 4 / 3;
+  }
+
+  .product-media.compare-slider {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .compare-canvas {
+    --compare-label-bar: 40px;
+  }
+
+  .compare-divider i {
+    width: 42px;
+    height: 42px;
   }
 
   .motion-asset-label {

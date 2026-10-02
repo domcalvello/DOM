@@ -748,6 +748,7 @@ textarea {
 
 .compare-canvas {
   --compare-label-bar: clamp(38px, 4vw, 44px);
+  --compare-meta-bar: 56px;
   position: absolute;
   inset: 0;
   overflow: hidden;
@@ -765,9 +766,9 @@ textarea {
 
 .compare-canvas .compare-image {
   position: absolute;
-  inset: var(--compare-label-bar) 0 auto;
+  inset: var(--compare-label-bar) 0 var(--compare-meta-bar);
   width: 100%;
-  height: calc(100% - var(--compare-label-bar));
+  height: auto;
   display: block;
   object-fit: contain;
   background: #eff3f5;
@@ -778,9 +779,9 @@ textarea {
 .compare-before {
   position: absolute;
   z-index: 1;
-  inset: var(--compare-label-bar) 0 auto;
+  inset: var(--compare-label-bar) 0 var(--compare-meta-bar);
   width: 100%;
-  height: calc(100% - var(--compare-label-bar));
+  height: auto;
   clip-path: inset(0 calc(100% - var(--compare-position)) 0 0);
   border-right: 2px solid var(--gold);
 }
@@ -794,10 +795,10 @@ textarea {
   position: absolute;
   z-index: 3;
   top: var(--compare-label-bar);
-  bottom: auto;
+  bottom: var(--compare-meta-bar);
   left: var(--compare-position);
   width: 2px;
-  height: calc(100% - var(--compare-label-bar));
+  height: auto;
   display: grid;
   place-items: center;
   color: var(--navy-950);
@@ -864,9 +865,9 @@ textarea {
 .compare-range {
   position: absolute;
   z-index: 4;
-  inset: var(--compare-label-bar) 0 auto;
+  inset: var(--compare-label-bar) 0 var(--compare-meta-bar);
   width: 100%;
-  height: calc(100% - var(--compare-label-bar));
+  height: auto;
   margin: 0;
   appearance: none;
   opacity: 0;
@@ -1070,6 +1071,11 @@ textarea {
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.compare-slider .product-media-meta {
+  height: 56px;
+  padding-block: 0;
 }
 
 .product-media-meta strong {
@@ -2034,11 +2040,13 @@ textarea {
   gap: 0 13px;
 }
 
-.footer-grid > div:first-child strong {
+.footer-logo {
+  width: 116px;
+  height: 70px;
+  display: block;
   grid-row: span 2;
-  color: var(--gold);
-  font-size: 2.8rem;
-  letter-spacing: -0.04em;
+  object-fit: cover;
+  object-position: center;
 }
 
 .footer-grid > div:first-child span {
@@ -2118,6 +2126,107 @@ textarea {
 .motion-ready .reveal.is-revealed {
   transform: translateY(0);
   filter: blur(0);
+}
+
+@media (min-width: 821px) {
+  .service-product[data-service="Website Visual Upgrade"],
+  .service-product[data-service="Product Visualization"] {
+    min-height: 0;
+    align-items: start;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .product-media {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 1.32 / 1;
+  }
+
+  .service-product[data-service="Product Visualization"] .product-media {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 1.32 / 1;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .product-body,
+  .service-product[data-service="Product Visualization"] .product-body {
+    display: grid;
+    align-content: space-between;
+    align-self: stretch;
+    padding: clamp(22px, 2vw, 32px);
+    padding-bottom: 8px;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .product-body header,
+  .service-product[data-service="Product Visualization"] .product-body header {
+    margin-bottom: 20px;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .product-body header p,
+  .service-product[data-service="Product Visualization"] .product-body header p {
+    margin-top: 10px;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .package-picker,
+  .service-product[data-service="Product Visualization"] .package-picker {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .package-picker legend,
+  .service-product[data-service="Product Visualization"] .package-picker legend {
+    grid-column: 1 / -1;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .package-option,
+  .service-product[data-service="Product Visualization"] .package-option {
+    min-height: 54px;
+    grid-template-columns: 18px minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 7px 10px;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .package-option b,
+  .service-product[data-service="Product Visualization"] .package-option b {
+    font-size: 0.78rem;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .package-option small,
+  .service-product[data-service="Product Visualization"] .package-option small {
+    font-size: 0.66rem;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .package-option > strong,
+  .service-product[data-service="Product Visualization"] .package-option > strong {
+    font-size: 1rem;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .package-panels,
+  .service-product[data-service="Product Visualization"] .package-panels {
+    min-height: 82px;
+    margin-top: 14px;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .choose-package,
+  .service-product[data-service="Product Visualization"] .choose-package {
+    justify-self: start;
+    margin-top: 0;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .compare-image,
+  .service-product[data-service="Product Visualization"] .compare-image {
+    object-position: center center;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1099px) {
+  .service-product[data-service="Website Visual Upgrade"],
+  .service-product[data-service="Product Visualization"] {
+    grid-template-columns: 1fr;
+  }
+
+  .service-product[data-service="Website Visual Upgrade"] .product-media,
+  .service-product[data-service="Product Visualization"] .product-media {
+    aspect-ratio: 16 / 10;
+  }
 }
 
 @media (max-width: 1080px) {

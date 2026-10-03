@@ -160,6 +160,7 @@ textarea {
   color: #fff;
   background: var(--navy-950);
   box-shadow: 0 10px 28px rgba(11, 21, 32, 0.17);
+  padding-top: env(safe-area-inset-top);
 }
 
 .utility-bar {
@@ -342,6 +343,7 @@ textarea {
 
 .search-control input {
   min-width: 0;
+  height: 100%;
   border: 0;
   outline: 0;
   color: var(--ink);
@@ -768,7 +770,7 @@ textarea {
   position: absolute;
   inset: var(--compare-label-bar) 0 var(--compare-meta-bar);
   width: 100%;
-  height: auto;
+  height: calc(100% - var(--compare-label-bar) - var(--compare-meta-bar));
   display: block;
   object-fit: contain;
   background: #eff3f5;
@@ -781,7 +783,7 @@ textarea {
   z-index: 1;
   inset: var(--compare-label-bar) 0 var(--compare-meta-bar);
   width: 100%;
-  height: auto;
+  height: calc(100% - var(--compare-label-bar) - var(--compare-meta-bar));
   clip-path: inset(0 calc(100% - var(--compare-position)) 0 0);
   border-right: 2px solid var(--gold);
 }
@@ -867,7 +869,7 @@ textarea {
   z-index: 4;
   inset: var(--compare-label-bar) 0 var(--compare-meta-bar);
   width: 100%;
-  height: auto;
+  height: calc(100% - var(--compare-label-bar) - var(--compare-meta-bar));
   margin: 0;
   appearance: none;
   opacity: 0;
@@ -1081,6 +1083,12 @@ textarea {
 .product-media-meta strong {
   color: var(--gold);
   font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.product-media-meta span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .product-body {
@@ -1117,7 +1125,6 @@ textarea {
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.035em;
-  text-transform: uppercase;
 }
 
 .package-picker {
@@ -1454,8 +1461,8 @@ textarea {
   min-height: 278px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 38px;
+  justify-content: flex-start;
+  gap: 68px;
   padding: 28px clamp(22px, 3vw, 42px) 34px;
   border-right: 1px solid var(--line);
 }
@@ -1476,7 +1483,7 @@ textarea {
   max-width: 15ch;
   margin: 0;
   color: var(--navy-950);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.16;
   text-transform: uppercase;
 }
@@ -2191,7 +2198,7 @@ textarea {
 
   .service-product[data-service="Website Visual Upgrade"] .package-option small,
   .service-product[data-service="Product Visualization"] .package-option small {
-    font-size: 0.66rem;
+    font-size: 0.7rem;
   }
 
   .service-product[data-service="Website Visual Upgrade"] .package-option > strong,
@@ -2249,6 +2256,14 @@ textarea {
 
   .hero-media {
     min-height: 430px;
+  }
+
+  .hero-media .media-small figcaption {
+    display: none;
+  }
+
+  .hero-media .media-main figcaption span:last-child {
+    display: none;
   }
 
   .service-product,
@@ -2441,7 +2456,9 @@ textarea {
   }
 
   .product-media {
-    min-height: 460px;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
     aspect-ratio: 16 / 10;
   }
 
@@ -2586,7 +2603,7 @@ textarea {
   }
 
   .hero-media {
-    min-height: 380px;
+    min-height: 340px;
   }
 
   .media-main {
@@ -2601,6 +2618,12 @@ textarea {
     display: grid;
     gap: 2px;
     padding: 11px 12px;
+  }
+
+  .media-main figcaption span {
+    min-width: 0;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
   }
 
   .media-small {
@@ -2656,11 +2679,11 @@ textarea {
   }
 
   .section {
-    padding-block: 78px;
+    padding-block: 58px;
   }
 
   .section-heading {
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
 
   .section-heading h2,
@@ -2674,17 +2697,19 @@ textarea {
   }
 
   .service-list {
-    gap: 30px;
+    gap: 24px;
   }
 
   .product-media {
-    min-height: 280px;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
     aspect-ratio: 4 / 3;
   }
 
   .product-media.compare-slider {
     min-height: 0;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 1.25 / 1;
   }
 
   .compare-canvas {
@@ -2692,8 +2717,16 @@ textarea {
   }
 
   .compare-divider i {
-    width: 42px;
-    height: 42px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .compare-divider i::before {
+    left: 13px;
+  }
+
+  .compare-divider i::after {
+    right: 13px;
   }
 
   .motion-asset-label {
@@ -2738,11 +2771,16 @@ textarea {
   }
 
   .product-body {
-    padding: 27px 22px 28px;
+    padding: 24px 18px;
   }
 
   .product-body h3 {
-    font-size: 1.85rem;
+    font-size: clamp(1.65rem, 8.4vw, 1.9rem);
+    overflow-wrap: anywhere;
+  }
+
+  .product-body header {
+    margin-bottom: 22px;
   }
 
   .package-option {
@@ -2759,12 +2797,18 @@ textarea {
   }
 
   .package-panels {
-    min-height: 176px;
+    min-height: 0;
+    margin-top: 18px;
+  }
+
+  .choose-package {
+    width: 100%;
+    margin-top: 22px;
   }
 
   .featured-grid {
-    gap: 42px;
-    padding-block: 76px;
+    gap: 32px;
+    padding-block: 58px;
   }
 
   .featured-scope {
@@ -2799,7 +2843,7 @@ textarea {
   }
 
   .transformation {
-    padding-block: 78px;
+    padding-block: 58px;
   }
 
   .transformation-stage figure,
@@ -2838,7 +2882,7 @@ textarea {
 
   .work-grid {
     grid-template-columns: 1fr;
-    grid-auto-rows: 300px;
+    grid-auto-rows: 250px;
   }
 
   .work-item.work-tall {
@@ -2880,7 +2924,7 @@ textarea {
   }
 
   .napkin-cta {
-    padding-block: 72px;
+    padding-block: 58px;
   }
 
   .napkin-cta ul {
@@ -2896,7 +2940,7 @@ textarea {
   }
 
   .project-form {
-    gap: 22px;
+    gap: 18px;
     padding: 24px 18px;
   }
 
@@ -2910,6 +2954,7 @@ textarea {
 
   .footer {
     padding-top: 58px;
+    padding-bottom: max(28px, env(safe-area-inset-bottom));
   }
 
   .footer-grid {
@@ -2925,6 +2970,55 @@ textarea {
     align-items: flex-start;
     flex-direction: column;
     margin-top: 42px;
+  }
+
+  .product-media-meta {
+    gap: 8px;
+    padding-inline: 12px;
+    font-size: 0.7rem;
+    line-height: 1.25;
+  }
+
+  .product-media-meta span {
+    max-width: 60%;
+  }
+
+  .product-media-meta strong {
+    font-size: 0.72rem;
+    text-align: right;
+  }
+
+  .search-control {
+    height: 46px;
+  }
+
+  .search-control button {
+    min-width: 68px;
+  }
+
+  .text-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer nav a,
+  .footer-bottom a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (pointer: coarse) {
+  .compare-range {
+    cursor: ew-resize;
+    touch-action: pan-y;
+  }
+
+  .compare-divider i {
+    width: 50px;
+    height: 50px;
   }
 }
 
